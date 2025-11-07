@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resumes",
+  "info": {
+    "singularName": "resume",
+    "pluralName": "resumes",
+    "displayName": "Resume"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "education": {
+      "type": "component",
+      "component": "education.education",
+      "repeatable": true
+    },
+    "experience": {
+      "type": "component",
+      "component": "experience.experience",
+      "repeatable": true
+    },
+    "skills": {
+      "type": "component",
+      "component": "skills.skills",
+      "repeatable": true
+    },
+    "projects": {
+      "type": "component",
+      "component": "projects.projects",
+      "repeatable": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
